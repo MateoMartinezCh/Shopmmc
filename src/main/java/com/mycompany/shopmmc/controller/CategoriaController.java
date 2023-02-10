@@ -31,20 +31,17 @@ public class CategoriaController extends AbstractController<Categoria> {
     public void load() {
         this.create();
         this.getSelected().setActivo(true);
-        //this.getSelected().setId(-1);
-        this.getSelected().setNombre("Alimentos");
+        this.getSelected().setNombre("Nuevo");
         this.add();
 
         this.create();
         this.getSelected().setActivo(true);
-        //this.getSelected().setId(-2);
-        this.getSelected().setNombre("Muebles");
+        this.getSelected().setNombre("Seminuevo");
         this.add();
 
         this.create();
         this.getSelected().setActivo(true);
-        //this.getSelected().setId(3);
-        this.getSelected().setNombre("Ropa");
+        this.getSelected().setNombre("Viejo");
         this.add();
     }
 

@@ -48,37 +48,38 @@ public class TiendaController extends AbstractController<Tienda> {
     public void load() {
         this.create();
         this.getSelected().setActivo(true);
-        //this.getSelected().setId(-1);
-        this.getSelected().setNombre("Mercadona");
-        this.getSelected().setDireccion("Calle maria del carmen");
-        this.getSelected().setDescripcion("descripcion para mercadona");
-        this.getSelected().setCoordenadas("2323d");
-        
+        this.getSelected().setNombre("Tieda De Rojales");
+        this.getSelected().setDireccion("Calle Juan Nº1");
+        this.getSelected().setDescripcion("La mejor tienda de rojales");
+        this.getSelected().setCoordenadas("38.08702047762007, -0.7248397994436843");
+
         this.add();
 
         this.create();
         this.getSelected().setActivo(true);
-        //this.getSelected().setId(-2);
-        this.getSelected().setNombre("Dia");
-         this.getSelected().setDireccion("Calle maria del sol");
-        this.getSelected().setDescripcion("descripcion para dia");
-        this.getSelected().setCoordenadas("2323awd");
+        this.getSelected().setNombre("Tienda de Almoradí");
+        this.getSelected().setDireccion("Calle romero Nº4");
+        this.getSelected().setDescripcion("La mejor tienda de almoradí");
+        this.getSelected().setCoordenadas("38.10929279294716, -0.7915971848083962");
         this.add();
 
         this.create();
         this.getSelected().setActivo(true);
         //this.getSelected().setId(3);
-        this.getSelected().setNombre("Consum");
-         this.getSelected().setDireccion("Calle maria del rosario");
-        this.getSelected().setDescripcion("descripcion para consum");
-        this.getSelected().setCoordenadas("232d3d");
+        this.getSelected().setNombre("Tienda de Guardamar");
+        this.getSelected().setDireccion("Calle Costa Nº8");
+        this.getSelected().setDescripcion("La mejor tienda de guardamar");
+        this.getSelected().setCoordenadas("38.088517285869564, -0.6466562867995801");
         this.add();
     }
 
     public String remove() {
         if (this.getSelected() != null) {
-            this.repositorio.remove(this.getSelected());
-            return "remove";
+            if (this.getSelected().getCategoria().getNombre() == null) {
+                this.repositorio.remove(this.getSelected());
+                return "remove";
+            }
+            return "failure";
         } else {
             return "";
         }

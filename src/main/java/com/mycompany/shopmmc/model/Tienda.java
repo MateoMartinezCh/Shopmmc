@@ -28,7 +28,7 @@ public class Tienda implements Cloneable {
     public Tienda() {
       
         this.id = -1;
-        this.nombre = nombre;
+        this.nombre = "";
         this.direccion = "";
         this.activo = true;
         this.categoria = new Categoria();
@@ -105,7 +105,7 @@ public class Tienda implements Cloneable {
     }
     
     public String getCoordenadas(){
-        return descripcion;
+        return coordenadas;
     }
     public void setCoordenadas(String coordenadas){
         this.coordenadas = coordenadas;
