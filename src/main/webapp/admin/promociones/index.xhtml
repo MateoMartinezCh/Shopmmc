@@ -25,6 +25,15 @@
                     <p:column headerText="Name">
                         <h:outputText value="#{promocion.nombre}" />
                     </p:column>
+                    <p:column headerText="Descripcion">
+                        <h:outputText value="#{promocion.descripcion}" />
+                    </p:column>
+                    <p:column headerText="Fecha inicio">
+                        <h:outputText value="#{promocion.fechainicio}" />
+                    </p:column>
+                    <p:column headerText="Fecha fin">
+                        <h:outputText value="#{promocion.fechafin}" />
+                    </p:column>
                     <p:column headerText="Activo">
                         <p:selectBooleanCheckbox  id="activo" value="#{promocion.activo}" itemLabel="Activo" disabled="true"/>  
                     </p:column>

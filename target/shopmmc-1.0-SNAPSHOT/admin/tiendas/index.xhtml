@@ -48,7 +48,7 @@
 
                         <h:form>
 
-                            <p:commandButton action = "#{tiendaController.remove}" value = "Borrar" icon="pi pi-trash" styleClass="ui-button-danger" >
+                            <p:commandButton action = "#{tiendaController.remove}" value = "Borrar" icon="pi pi-trash" styleClass="ui-button-danger" process="@this">
                                 <f:setPropertyActionListener value="#{tienda}"
                                                              target="#{tiendaController.selected}"/>
                             </p:commandButton>

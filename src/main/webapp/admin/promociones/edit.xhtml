@@ -21,8 +21,14 @@
                             <p:inputText id="id" disabled="true" value="#{promocionController.selected.id}"/>
                             <h:outputLabel value="Nombre" for="name" />
                             <p:inputText id="name" value="#{promocionController.selected.nombre}" title="name" required="true" requiredMessage="requerido"/>
+                            <h:outputLabel value="Descripcion" for="descripcion" />
+                            <p:inputText id="descripcion" value="#{promocionController.selected.descripcion}" title="descripcion" required="true" requiredMessage="requerido"/>
+                            <h:outputLabel value="Fecha inicio" for="fechainicio" />
+                            <p:inputText id="fechainicio" value="#{promocionController.selected.fechainicio}" title="fechainicio" required="true" requiredMessage="requerido"/>
+                            <h:outputLabel value="Fecha fin" for="fechafin" />
+                            <p:inputText id="fechafin" value="#{promocionController.selected.fechafin}" title="fechafin" required="true" requiredMessage="requerido"/>
                             <h:outputLabel value="Activo" for="activo" />
-
+                            
                             <p:selectBooleanCheckbox  id="activo" value="#{promocionController.selected.activo}" itemLabel="Activo"/>  
                             <p:commandButton action="#{promocionController.cancel}" value="Cancelar" icon="pi pi-times"  styleClass="ui-button-warning"  process="@this"/>
 

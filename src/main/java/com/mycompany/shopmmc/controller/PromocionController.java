@@ -32,19 +32,30 @@ public class PromocionController extends AbstractController<Promocion> {
         this.create();
         this.getSelected().setActivo(true);
         //this.getSelected().setId(-1);
-        this.getSelected().setNombre("20porciento");
+        this.getSelected().setNombre("25% De descuento");
+        this.getSelected().setDescripcion("Descuento de inauguración");
+        this.getSelected().setFechainicio("10 de febrero del 2023");
+        this.getSelected().setFechafin("16 de febrero del 2023");
         this.add();
 
         this.create();
         this.getSelected().setActivo(true);
         //this.getSelected().setId(-2);
-        this.getSelected().setNombre("10porciento");
+        this.getSelected().setNombre("50% De descuento");
+        this.getSelected().setDescripcion("Descuento de liquidación");
+        this.getSelected().setFechainicio("19 de febrero del 2023");
+        this.getSelected().setFechafin("30 de febrero del 2023");
+        
         this.add();
 
         this.create();
         this.getSelected().setActivo(true);
         //this.getSelected().setId(3);
-        this.getSelected().setNombre("30porciento");
+        this.getSelected().setNombre("15% De descuento");
+        this.getSelected().setDescripcion("Descuento para Jóvenes");
+        this.getSelected().setFechainicio("1 de enero del 2023");
+        this.getSelected().setFechafin("31 de diciembre del 2023");
+        
         this.add();
     }
 

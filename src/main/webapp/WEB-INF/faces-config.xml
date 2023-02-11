@@ -31,14 +31,14 @@
             <from-outcome>categorias</from-outcome>
             <to-view-id>/admin/categorias/index.xhtml</to-view-id>
         </navigation-case>
-        <navigation-case>
+        <!--<navigation-case>
             <from-outcome>opciones</from-outcome>
             <to-view-id>/admin/opciones/index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-outcome>provincias</from-outcome>
             <to-view-id>/admin/provincias/index.xhtml</to-view-id>
-        </navigation-case>
+        </navigation-case>-->
         <navigation-case>
             <from-outcome>tiendas</from-outcome>
             <to-view-id>/admin/tiendas/index.xhtml</to-view-id>
@@ -156,8 +156,6 @@
             <from-outcome>edit</from-outcome>
             <to-view-id>/admin/tiendas/edit.xhtml</to-view-id>
         </navigation-case>
-        
-         
         <navigation-case>
             <from-outcome>remove</from-outcome>
             <to-view-id>/admin/tiendas/index.xhtml</to-view-id>

@@ -11,11 +11,16 @@ package com.mycompany.shopmmc.model;
 public class Promocion implements Comparable<Promocion>, Cloneable {
 
     private String nombre;
+    private String descripcion;
+    private String fechainicio;
+    private String fechafin;
     private boolean activo;
     private int id;
 
     public Promocion() {
         this.id = -1;
+        //this.fechainicio = "10 del 02 del 2023";
+        //this.fechafin = "15 del 02 del 2023";
     }
 
     /**
@@ -58,6 +63,48 @@ public class Promocion implements Comparable<Promocion>, Cloneable {
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    /**
+     * @return the descripcion
+     */
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    /**
+     * @param descripcion the descripcion to set
+     */
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    /**
+     * @return the fechainicio
+     */
+    public String getFechainicio() {
+        return fechainicio;
+    }
+
+    /**
+     * @param fechainicio the fechainicio to set
+     */
+    public void setFechainicio(String fechainicio) {
+        this.fechainicio = fechainicio;
+    }
+
+    /**
+     * @return the fechafin
+     */
+    public String getFechafin() {
+        return fechafin;
+    }
+
+    /**
+     * @param fechafin the fechafin to set
+     */
+    public void setFechafin(String fechafin) {
+        this.fechafin = fechafin;
     }
 
     @Override
