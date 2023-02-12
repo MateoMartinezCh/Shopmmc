@@ -4,12 +4,11 @@
  */
 package com.mycompany.shopmmc.views;
 
-import com.mycompany.shopmmc.controller.OpcionController;
+import com.mycompany.shopmmc.controller.PromocionController;
 import com.mycompany.shopmmc.controller.TiendaController;
 import com.mycompany.shopmmc.controller.CategoriaController;
 
 import com.mycompany.shopmmc.model.Promocion;
-import com.mycompany.shopmmc.model.Opcion;
 import com.mycompany.shopmmc.model.Tienda;
 import com.mycompany.shopmmc.model.Categoria;
 import jakarta.annotation.PostConstruct;
@@ -49,7 +48,7 @@ public class PropiedadEditView implements Serializable {
     @Inject
     private CategoriaController categoriaController;
     @Inject
-    private OpcionController opcionController;
+    private PromocionController promocionController;
     @Inject
     private TiendaController tiendaController;
     private Tienda tienda;
@@ -68,7 +67,7 @@ public class PropiedadEditView implements Serializable {
     /**
      * @return the t
      */
-    public String getTipo() {
+    public String getCategoria() {
         if (this.tienda.getCategoria() != null) {
             return this.tienda.getCategoria().getNombre();
         } else {
@@ -80,7 +79,7 @@ public class PropiedadEditView implements Serializable {
     /**
      * @param t the t to set
      */
-    public void setTipo(String item) {
+    public void setCategoria(String item) {
         Optional<Categoria> consulta = this.categoriaController.getItems().stream().filter(element -> {
             return element.getNombre().equals(item);
         }).findFirst();
@@ -94,7 +93,7 @@ public class PropiedadEditView implements Serializable {
     @PostConstruct
     public void init() {
 
-        // this.tipo = new Tipo();
+        // this.tipo = new Categoria();
         if (this.tiendaController.getSelected() == null) {
             this.tienda = new Tienda();
         } else {
@@ -143,16 +142,16 @@ public class PropiedadEditView implements Serializable {
         }
     }
 */
-    public List<Opcion> getOpciones() {
-        return this.opcionController.getItems();
+    public List<Promocion> getPromociones() {
+        return this.promocionController.getItems();
     }
 
-    public void setOpcion(String item) {
-        Optional<Opcion> consulta = this.opcionController.getItems().stream().filter(element -> {
+    public void setPromocion(String item) {
+        Optional<Promocion> consulta = this.promocionController.getItems().stream().filter(element -> {
             return element.getNombre().equals(item);
         }).findFirst();
         if (!consulta.isEmpty()) {
-            this.tienda.setOpcion(consulta.get());
+            this.tienda.setPromocion(consulta.get());
         }
     }
 
@@ -165,15 +164,15 @@ public class PropiedadEditView implements Serializable {
 
     }
 
-    public String getOpcion() {
-        if (this.tienda.getOpcion() != null) {
-            return this.tienda.getOpcion().getNombre(); //this.getPropiedad().getOpcion();
+    public String getPromocion() {
+        if (this.tienda.getPromocion()!= null) {
+            return this.tienda.getPromocion().getNombre(); 
         } else {
             return "";
         }
     }
 
-    public List<Categoria> getTipos() {
+    public List<Categoria> getCategorias() {
         return this.categoriaController.getItems();
     }
 
@@ -203,7 +202,6 @@ public class PropiedadEditView implements Serializable {
                 p.setDireccion(this.tienda.getDireccion());
                 p.setActivo(tienda.isActivo());
                 p.setPromocion(tienda.getPromocion());
-                p.setOpcion(tienda.getOpcion());
                 p.setCategoria(tienda.getCategoria());
                 p.setPrecio(tienda.getPrecio());
                 p.setCoordenadas(tienda.getCoordenadas());

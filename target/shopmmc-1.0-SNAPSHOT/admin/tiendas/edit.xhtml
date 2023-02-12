@@ -28,12 +28,20 @@
                             <h:outputLabel value="Coordenadas" for="coordenadas" />
                             <p:inputText id="coordenadas" value="#{tiendaController.selected.coordenadas}" title="coordenadas" required="true" requiredMessage="requerido"/>
                             <h:outputLabel value="Categoria" for="categoria" />
-                            <p:selectOneMenu id="categoria" value="#{propiedadEditView.tipo}" >
+                            <p:selectOneMenu id="categoria" value="#{propiedadEditView.categoria}" >
                                 <f:selectItem itemLabel="Select One" itemValue=""/>
-                                <f:selectItems value="#{propiedadEditView.tipos}" var="tipo"
-                                               itemValue="#{tipo.nombre}"
-                                               itemLabel="#{tipo.nombre}"
-                                               itemDisabled="#{!tipo.activo}"/>
+                                <f:selectItems value="#{propiedadEditView.categorias}" var="categoria"
+                                               itemValue="#{categoria.nombre}"
+                                               itemLabel="#{categoria.nombre}"
+                                               itemDisabled="#{!categoria.activo}"/>
+                            </p:selectOneMenu>
+                            <h:outputLabel value="Promocion" for="promocion" />
+                            <p:selectOneMenu id="promocion" value="#{propiedadEditView.promocion}" >
+                                <f:selectItem itemLabel="Select One" itemValue=""/>
+                                <f:selectItems value="#{propiedadEditView.promociones}" var="promocion"
+                                               itemValue="#{promocion.nombre}"
+                                               itemLabel="#{promocion.nombre}"
+                                               itemDisabled="#{!promocion.activo}"/>
                             </p:selectOneMenu>
                             <h:outputLabel value="Activo" for="activo" />
                             <p:selectBooleanCheckbox  id="activo" value="#{tiendaController.selected.activo}" itemLabel="Activo"/>  
