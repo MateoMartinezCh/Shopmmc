@@ -19,7 +19,6 @@ public class Tienda implements Cloneable {
     private String descripcion;
     private String coordenadas;
     private Categoria categoria;
-    private Opcion opcion;
     private Promocion promocion;
    
     private boolean activo;
@@ -55,13 +54,6 @@ public class Tienda implements Cloneable {
     public void setCategoria(Categoria cat) {
         this.categoria = cat;
     }
-    public Opcion getOpcion() {
-        return opcion;
-    }
-    public void setOpcion(Opcion opcion) {
-        this.opcion = opcion;
-    }
-
     
     public Promocion getPromocion(){
         return this.promocion;
@@ -122,7 +114,6 @@ public class Tienda implements Cloneable {
         p.setDescripcion(descripcion);
         //copia superficial
         p.setPromocion(promocion);
-        p.setOpcion(opcion);
         p.setCategoria(categoria);
       
        

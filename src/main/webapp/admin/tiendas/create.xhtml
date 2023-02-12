@@ -31,12 +31,12 @@
                             <h:outputLabel value="Activo" for="activo" />
                             <p:selectBooleanCheckbox  id="activo" value="#{tiendaController.selected.activo}" itemLabel="Activo"/> 
                             <h:outputLabel value="Categoria" for="categoria" />
-                            <p:selectOneMenu id="categoria" value="#{propiedadEditView.tipo}" >
+                            <p:selectOneMenu id="categoria" value="#{propiedadEditView.categoria}" >
                                 <f:selectItem itemLabel="Select One" itemValue=""/>
-                                <f:selectItems value="#{propiedadEditView.tipos}" var="tipo"
-                                               itemValue="#{tipo.nombre}"
-                                               itemLabel="#{tipo.nombre}"
-                                               itemDisabled="#{!tipo.activo}"/>
+                                <f:selectItems value="#{propiedadEditView.categorias}" var="tipo"
+                                               itemValue="#{categoria.nombre}"
+                                               itemLabel="#{categoria.nombre}"
+                                               itemDisabled="#{!categoria.activo}"/>
                             </p:selectOneMenu>
                             <p:commandButton action="#{tiendaController.cancel}" value="Cancelar" icon="pi pi-times"  styleClass="ui-button-warning" process="@this"/>
 

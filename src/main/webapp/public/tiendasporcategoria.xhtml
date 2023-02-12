@@ -10,13 +10,12 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <ui:composition template="../templates/admin.xhtml">
+        <ui:composition template="../templates/public.xhtml">
             <ui:param name="parametro" value="Buscar Tiendas por su categoria"/>
             <ui:define name="contenido">
                 <div class="card">
                     <h:form>
                         <p:panel id="panel" header="Search Form" styleClass="mb-3">
-                            <p:growl id="messages"/>
 
                             <h:panelGrid columns="4" cellpadding="7">
                                 <!--<h:outputLabel for="txt1" value="Text 1: *"/>

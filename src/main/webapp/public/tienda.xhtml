@@ -10,7 +10,7 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <ui:composition template="../templates/admin.xhtml">
+        <ui:composition template="../templates/public.xhtml">
             <ui:param name="parametro" value="Tiendas>>Listado"/>
             <ui:define name="contenido">
                 <p:dataTable id="tienda" var="tienda" value="#{tiendaController.items}" rowKey="#{tienda.id}"

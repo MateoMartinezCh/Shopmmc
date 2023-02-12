@@ -12,8 +12,6 @@ com\mycompany\shopmmc\views\SearchView.class
 com\mycompany\shopmmc\controller\repository\IRepository.class
 com\mycompany\shopmmc\controller\repository\MemoryRepository.class
 com\mycompany\shopmmc\controller\PromocionController.class
-com\mycompany\shopmmc\controller\OpcionController.class
 com\mycompany\shopmmc\resources\JakartaEE91Resource.class
-com\mycompany\shopmmc\model\Opcion.class
 com\mycompany\shopmmc\model\ICopyable.class
 com\mycompany\shopmmc\controller\CategoriaController.class

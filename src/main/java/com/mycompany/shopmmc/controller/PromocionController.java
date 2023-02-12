@@ -19,8 +19,10 @@ import jakarta.inject.Named;
 @Named
 @ApplicationScoped
 public class PromocionController extends AbstractController<Promocion> {
+
     @Inject
     TiendaController tiendacontroller;
+
     public PromocionController() {
         super(Promocion::new);
         //this.load();
@@ -36,8 +38,17 @@ public class PromocionController extends AbstractController<Promocion> {
         this.getSelected().setDescripcion("Descuento de inauguración");
         this.getSelected().setFechainicio("10 de febrero del 2023");
         this.getSelected().setFechafin("16 de febrero del 2023");
+        
         this.add();
-
+                
+        this.create();
+        this.getSelected().setNombre("10% De descuento");
+        this.getSelected().setDescripcion("Oferta de fin de año");
+        this.getSelected().setFechainicio("10 de diciembre del 2023");
+        this.getSelected().setFechafin("31 de diciembre del 2023");
+        
+        this.add();
+        
         this.create();
         this.getSelected().setActivo(true);
         //this.getSelected().setId(-2);
@@ -45,7 +56,7 @@ public class PromocionController extends AbstractController<Promocion> {
         this.getSelected().setDescripcion("Descuento de liquidación");
         this.getSelected().setFechainicio("19 de febrero del 2023");
         this.getSelected().setFechafin("30 de febrero del 2023");
-        
+
         this.add();
 
         this.create();
@@ -55,14 +66,14 @@ public class PromocionController extends AbstractController<Promocion> {
         this.getSelected().setDescripcion("Descuento para Jóvenes");
         this.getSelected().setFechainicio("1 de enero del 2023");
         this.getSelected().setFechafin("31 de diciembre del 2023");
-        
+
         this.add();
     }
 
     public String remove() {
         if (this.getSelected() != null) {
             if (this.tiendacontroller.getItems().stream().filter(item -> {
-                return item.getPromocion()== this.getSelected();
+                return item.getPromocion() == this.getSelected();
             }).count() == 0) {
                 this.repositorio.remove(this.getSelected());
                 return "remove";
@@ -91,7 +102,7 @@ public class PromocionController extends AbstractController<Promocion> {
         } else {
             this.repositorio.update(this.getSelected());
             //si ya existe
-    
+
         }
         return "sucess";
     }
