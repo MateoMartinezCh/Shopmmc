@@ -31,6 +31,9 @@
                     <p:column headerText="Coordenadas">
                         <h:outputText value="#{tienda.coordenadas}" />
                     </p:column>
+                    <p:column headerText="Categoria">
+                        <h:outputText value="#{tienda.categoria.nombre}" />
+                    </p:column>
                     <p:column headerText="Activo">
                         <p:selectBooleanCheckbox  id="activo" value="#{tienda.activo}" itemLabel="Activo" disabled="true"/>  
                     </p:column>

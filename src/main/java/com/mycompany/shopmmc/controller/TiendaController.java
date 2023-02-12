@@ -52,6 +52,13 @@ public class TiendaController extends AbstractController<Tienda> {
         this.getSelected().setDireccion("Calle Juan Nº1");
         this.getSelected().setDescripcion("La mejor tienda de rojales");
         this.getSelected().setCoordenadas("38.08702047762007, -0.7248397994436843");
+        Promocion promo = new Promocion();
+        promo.setNombre("10%");
+        promo.setDescripcion("Oferta de fin de año");
+        promo.setFechainicio("10 de diciembre");
+        promo.setFechafin("31 de diciembre");
+        promo.setActivo(true);
+        this.getSelected().setPromocion(promo);
 
         this.add();
 

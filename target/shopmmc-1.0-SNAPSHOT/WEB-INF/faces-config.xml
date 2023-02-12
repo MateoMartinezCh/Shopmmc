@@ -36,13 +36,17 @@
             <to-view-id>/public/categorias.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
+            <from-outcome>tienda</from-outcome>
+            <to-view-id>/public/tienda.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>tiendasporcategoria</from-outcome>
+            <to-view-id>/public/tiendasporcategoria.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
             <from-outcome>admin_categorias</from-outcome>
             <to-view-id>/admin/categorias/index.xhtml</to-view-id>
         </navigation-case>
-        <!--<navigation-case>
-            <from-outcome>provincias</from-outcome>
-            <to-view-id>/admin/provincias/index.xhtml</to-view-id>
-        </navigation-case>-->
         <navigation-case>
             <from-outcome>admin_tiendas</from-outcome>
             <to-view-id>/admin/tiendas/index.xhtml</to-view-id>

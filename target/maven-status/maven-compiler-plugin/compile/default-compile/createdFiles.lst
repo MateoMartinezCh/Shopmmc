@@ -8,6 +8,7 @@ com\mycompany\shopmmc\model\Categoria.class
 com\mycompany\shopmmc\JakartaRestConfiguration.class
 com\mycompany\shopmmc\controller\AbstractController.class
 com\mycompany\shopmmc\model\Promocion.class
+com\mycompany\shopmmc\views\SearchView.class
 com\mycompany\shopmmc\controller\repository\IRepository.class
 com\mycompany\shopmmc\controller\repository\MemoryRepository.class
 com\mycompany\shopmmc\controller\PromocionController.class
