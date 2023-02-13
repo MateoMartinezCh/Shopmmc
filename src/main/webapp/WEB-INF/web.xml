@@ -37,7 +37,7 @@
     </context-param>
 
     <welcome-file-list>
-        <welcome-file>admin/categorias/index.xhtml</welcome-file>
+        <welcome-file>public/principal.xhtml</welcome-file>
     </welcome-file-list>
     <context-param>
         <param-name>primefaces.FONT_AWESOME</param-name>

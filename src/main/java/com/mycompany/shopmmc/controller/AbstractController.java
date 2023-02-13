@@ -49,7 +49,7 @@ public abstract class AbstractController<T> implements IController<T> {
         List<T> t = this.repositorio.getAll();
         return t;
     }
-
+   
     @Override
     public void setSelected(T element) {
         this.current = element;

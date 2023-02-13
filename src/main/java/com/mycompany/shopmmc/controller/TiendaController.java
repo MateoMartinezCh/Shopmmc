@@ -7,6 +7,7 @@ package com.mycompany.shopmmc.controller;
 import com.mycompany.shopmmc.model.Categoria;
 import com.mycompany.shopmmc.model.Promocion;
 import com.mycompany.shopmmc.model.Tienda;
+import com.mycompany.shopmmc.views.SearchView;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -15,6 +16,8 @@ import jakarta.faces.event.ValueChangeEvent;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import jakarta.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -29,7 +32,8 @@ public class TiendaController extends AbstractController<Tienda> {
     private PromocionController promocionController;
     @Inject
     private CategoriaController categoriaController;
-
+    //@Inject
+    //private SearchView searchView;
     public TiendaController() {
         super(Tienda::new);
         //this.load();
@@ -39,7 +43,12 @@ public class TiendaController extends AbstractController<Tienda> {
     public Tienda getSelected() {
         return super.getSelected();
     }
-
+ /*    public List<Tienda> getItemsPorCategoria() {
+        List<Tienda> tiendas = this.repositorio.getAll();
+        List<Tienda> tiendasalistar = new ArrayList<Tienda>();
+        tiendas.forEach(tienda -> tienda.getCategoria().getNombre());
+        return t;
+    }*/
     @Override
     @PostConstruct
     public void load() {
@@ -81,7 +90,7 @@ public class TiendaController extends AbstractController<Tienda> {
         }
 
     }
-
+    
     @Override
     public String preEdit() {
         return "edit";
